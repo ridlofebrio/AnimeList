@@ -1,3 +1,4 @@
+import 'package:anime_world_tutorial/Screen/homePage.dart';
 import 'package:flutter/material.dart';
 import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
 
@@ -22,11 +23,7 @@ class SplashScreen extends StatelessWidget {
       duration: const Duration(milliseconds: 3500),
       animationDuration: const Duration(milliseconds: 1000),
       onAnimationEnd: () => debugPrint("On Scale End"),
-      nextScreen: const Scaffold(
-        body: Center(
-          child: Text("Hello World"),
-        ),
-      ),
+      nextScreen: const HomeScreen(),
     );
   }
 }
