@@ -1,5 +1,6 @@
 import 'package:anime_world_tutorial/api/get_anime_rank.dart';
 import 'package:anime_world_tutorial/core/screens/error_screen.dart';
+import 'package:anime_world_tutorial/view/view_all.dart';
 import 'package:anime_world_tutorial/widget/anime_tile.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +41,9 @@ class FeaturedAnime extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => ViewAll(label: label, rankingType: rankingType)));
+                    },
                     child: const Text("See All"),
                   ),
                 ],
