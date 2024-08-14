@@ -21,9 +21,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final _screens = const [
     animeScreen(),
-    Center(child: Text("Search Screen")),
-    Center(child: Text("Categories Screen")),
-    Center(child: Text("Settings Screen")),
+    Center(child: Text("Search Masih Proses")),
+    Center(child: Text("Categories Masih Proses")),
+    Center(child: Text("Settings Masih Proses")),
   ];
 
   late int _currentScreenIndex;

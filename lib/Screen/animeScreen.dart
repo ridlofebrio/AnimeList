@@ -1,3 +1,4 @@
+import 'package:anime_world_tutorial/view/featured_anime.dart';
 import 'package:anime_world_tutorial/widget/top_anime.dart';
 import 'package:flutter/material.dart';
 
@@ -25,8 +26,50 @@ class _animeScreenState extends State<animeScreen> {
           children: [
             SizedBox(
               child : TopAnimeWidget(),
-              height: 300,
+              height: 250,
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+              child: SizedBox(
+                height: 300,
+                child: FeaturedAnime(
+                  label: "Top Anime",
+                  rankingType: "all",
+                ),
+              ),
+            ),
+             Padding(
+              padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+              child: SizedBox(
+                height: 300,
+                child: FeaturedAnime(
+                  label: "Top Movie",
+                  rankingType: "movie",
+                ),
+              ),
+            ),
+             Padding(
+              padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+              child: SizedBox(
+                height: 300,
+                child: FeaturedAnime(
+                  label: "Top Popular",
+                  rankingType: "bypopularity",
+                ),
+              ),
+            ),
+             Padding(
+              padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+              child: SizedBox(
+                height: 300,
+                child: FeaturedAnime(
+                  label: "Top TV Series",
+                  rankingType: "tv",
+                ),
+              ),
             )
+          
+
           ],
           )
       ),
