@@ -1,3 +1,4 @@
+import 'package:anime_world_tutorial/Screen/anime_details.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -65,19 +66,32 @@ class _TopAnimeSliderState extends State<TopAnimeSlider> {
 }
 
 class TopAnimePicture extends StatelessWidget {
-  const TopAnimePicture({super.key, required this.anime});
+  const TopAnimePicture({
+    super.key,
+    required this.anime,
+  });
 
   final Anime anime;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 5),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        image: DecorationImage(
-          image: NetworkImage(anime.node.mainPicture.medium),
-          fit: BoxFit.cover,
+    return InkWell(
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => AnimeDetail(id: anime.node.id),
+          ),
+        );
+      },
+      splashColor: Colors.white,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(8.0),
+        child: AspectRatio(
+          aspectRatio: 16 / 9,
+          child: Image.network(
+            anime.node.mainPicture.medium,
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
