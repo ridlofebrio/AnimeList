@@ -1,6 +1,7 @@
 import 'package:anime_world_tutorial/Screen/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
+
 void main() {
   runApp(const MainApp());
 }

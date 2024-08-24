@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
 import '/config/app_config.dart';
 import '/models/anime.dart';
 import '/models/anime_info.dart';
@@ -26,9 +25,8 @@ Future<Iterable<Anime>> getAnimesbySearchApi({
 
     return animes;
   } else {
-    // Error handling
     debugPrint("Error: ${response.statusCode}");
     debugPrint("Body: ${response.body}");
-    throw Exception("Failed to get data!");
+    throw Exception('Failed to load animes');
   }
 }

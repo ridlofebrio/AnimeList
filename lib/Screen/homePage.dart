@@ -1,5 +1,5 @@
 import 'package:anime_world_tutorial/Screen/animeScreen.dart';
-import 'package:anime_world_tutorial/models/anime.dart';
+import 'package:anime_world_tutorial/Screen/anime_search.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final _screens = const [
     animeScreen(),
-    Center(child: Text("Search Masih Proses")),
+    SearchScreen(),
     Center(child: Text("Categories Masih Proses")),
     Center(child: Text("Settings Masih Proses")),
   ];

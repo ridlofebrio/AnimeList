@@ -1,8 +1,6 @@
-import 'dart:js';
 
 import 'package:anime_world_tutorial/api/get_anime_details.dart';
 import 'package:anime_world_tutorial/common/styles/text_styles.dart';
-import 'package:anime_world_tutorial/core/screens/error_screen.dart';
 import 'package:anime_world_tutorial/models/anime_details.dart';
 import 'package:anime_world_tutorial/models/picture.dart';
 import 'package:anime_world_tutorial/view/similar_animeview.dart';
@@ -148,7 +146,6 @@ class AnimeDetail extends StatelessWidget {
             ),
             itemBuilder: (context, index) {
               final image = pictures[index].medium;
-              final largeImage = pictures[index].large;
               return SizedBox(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
